@@ -1,0 +1,18 @@
+Directives
+======
+Special instructions for the DOM
+    1. Attribute Directives 
+        routerLink,
+        ngClass,
+        ngStyle,
+    2. Structural Directives 
+        Impact the structure of the page -- html 
+        *ngIf, 
+        *ngFor, 
+        ngSwitch
+
+    3. Custom Attribute Directives 
+        
+    4. Custom Structural Directives
+
+

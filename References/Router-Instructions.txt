@@ -1,0 +1,36 @@
+Step0: Identify the URLs 
+    Home - http://localhost:4200
+    Concepts - http://localhost:4200/concepts
+        ng g c concepts -is 
+    Contacts - http://localhost:4200/contacts
+        ng g c contacts -is 
+    About - http://localhost:4200/about
+        ng g c about -is 
+
+
+Step1: Let's set up the urls in nav.comp.html   
+    <a href="/">Home</a>
+    <a href="/concepts">Concepts</a>
+
+Step2: Configuring the paths in app-routing.module.ts
+    const routes: Routes = [
+        { path: "", component: ConceptsComponent },
+        { path: "concepts", component: ConceptsComponent },
+        { path: "contacts", component: ContactsComponent },
+        { path: "about", component: AboutComponent },
+    ];
+
+Step3: add <router-outlet></router-outlet> in app.comp.html 
+    This loads the mapped component inside. 
+
+Step4: If you check the app, page will reload. let's fix it. 
+    change all href to routerLink 
+
+Step5: Active menu should be set 
+    Add routerLinkActive="active" in all li's 
+    <li class="nav-item" routerLinkActive="active">
+
+Step6: Make only the right menus active 
+    In Home link alone add routerLinkActiveOptions 
+    <li class="nav-item" routerLinkActive="active" 
+    [routerLinkActiveOptions]="{exact: true}">

@@ -1,0 +1,28 @@
+Data Binding 
+======
+    TS => HTML 
+
+    1. String Interpolation 
+        {{ }}  
+        TS => HTML 
+    2. Property Binding 
+        []
+        TS => HTML
+    3. Event Binding 
+        ()
+        TS => HTML 
+    4. Two Way Binding 
+        TS <=> HTML 
+    5. Custom Property Binding
+    6. Custom Event Binding 
+
+Cross Component Communication
+    1. Parent Component to Child component 
+        Custom Property Binding 
+    2. Child Component to Parent Component 
+        Custom Event Binding     ng g c concepts/ceb -is 
+        @ViewChild()
+        @ViewChildren() -- Todo
+    3. Any to any component 
+        Prereq: Services and RxJs/Observable 
+
