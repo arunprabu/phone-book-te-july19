@@ -1,11 +1,14 @@
 Interface
+Model   
 Any to Any component communication
 Guards
+    ng g g shared/guards/auth 
+
 Pipes
 
 Feature Modules
 ===
-ng g m product/product --flat -m app   // this will give a folderless module and update app.module.ts 
+ng g m products/products --flat -m app   // this will give a folderless module and update app.module.ts 
 
 check the app.module.ts -- find the new feature module in imports section
 

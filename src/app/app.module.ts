@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ProductsModule } from './products/products.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,6 +19,9 @@ import { CebComponent } from './concepts/ceb/ceb.component';
 import { ColorizrDirective } from './concepts/colorizr.directive';
 import { AddContactComponent } from './contacts/add-contact/add-contact.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { EllipsisPipe } from './shared/pipes/ellipsis.pipe';
+
 
 @NgModule({
   declarations: [
@@ -32,10 +37,13 @@ import { ContactDetailsComponent } from './contacts/contact-details/contact-deta
     CebComponent,
     ColorizrDirective,
     AddContactComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    PageNotFoundComponent,
+    EllipsisPipe
   ],
   imports: [
     BrowserModule,
+    ProductsModule, // Feature Module imported
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

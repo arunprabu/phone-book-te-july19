@@ -16,6 +16,11 @@
         </li>
       </app-nav>
       <app-search></app-search>
+      
+      <button type="button" class="btn btn-primary" 
+      style="margin-left: 10px;" 
+      (click)="gotoCartPage()">Cart ({{cartItemsList.length}})</button>
+
     </div>
   </nav>
 </header>

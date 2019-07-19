@@ -1,3 +1,19 @@
-<p>
-  about works!
-</p>
+<div>
+  <h1>Pipes</h1>
+  <p>Transform information </p>
+  <ul>
+    <li>Builtin pipes  - </li>
+    <li>custom pipes - ng g p shared/pipes/ellipsis</li>
+  </ul>
+
+  <p>{{birthday}}</p>
+  <p>{{birthday | date }}</p>
+  <p>{{birthday | date: 'dd/MMMM/yyyy hh:mm:ss a'}}</p>
+
+  <h2>Custom pipes -- ellipsis </h2>
+  <p>{{loremIpsum}}</p>
+  <p>{{loremIpsum | ellipsis}}</p>
+  <p>{{loremIpsum | ellipsis: '120'}}</p>
+  <p>{{loremIpsum | ellipsis: '60'}}</p>
+  
+</div>

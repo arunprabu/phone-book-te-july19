@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //ts 
-  
+  title = "phone-book-te-july19";
+
+  add(x: number, y: number ): number{
+    return x + y;
+  }
 }

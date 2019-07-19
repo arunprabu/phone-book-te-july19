@@ -1,0 +1,27 @@
+Automated Testing
+=====
+    0. Static type checking ( typescipt )
+    1. Unit Testing 
+            function add(x, y){
+                
+                return x + y; 
+            }
+
+            input should be number 
+            add btn disabled
+            output should also be number 
+            
+    2. Integration Testing 
+
+    3. E2E Testing 
+
+
+Unit Testing 
+========
+    Prereq: Jasmine JS (1/2 day)
+
+
+
+
+Electron JS 
+====
