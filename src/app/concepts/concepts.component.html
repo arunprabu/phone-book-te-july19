@@ -28,7 +28,6 @@
       <p>Exp of Developer: {{ devExp }} years</p>
       <p>Is Authenticated: {{isLoggedIn}}</p>
       <p>Dev has exp in... {{skillList[1]}}</p>
-      <p>Dev name is {{myProfile.name}}</p>
       <p>{{isAuthenticated()}}</p>
       <div title="{{conceptName}}">Mouseover to see...</div>
       <input type="text" value="{{conceptName}}">
@@ -39,9 +38,7 @@
       <div class="red">
         appears in red
       </div>
-      <div [class]="red">
-        will not work -- as there is no var defined in ts
-      </div>
+      
       <div [ngClass]="{ 'red': !isAuthenticated(), 'green': isAuthenticated() }">
         text will appear in red/green based on the returned value of isAuthenticated()
       </div>

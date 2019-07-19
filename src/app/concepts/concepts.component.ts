@@ -26,11 +26,6 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
     'js', 'nodejs', 'ng'
   ];
 
-  myProfile: {} = {
-    name: "Arun",
-    city: "Chn"
-  }
-
   
   //Property Binding 
   featureName: string = "Property Binding";

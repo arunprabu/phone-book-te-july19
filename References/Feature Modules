@@ -1,0 +1,21 @@
+Interface
+Any to Any component communication
+Guards
+Pipes
+
+Feature Modules
+===
+ng g m product/product --flat -m app   // this will give a folderless module and update app.module.ts 
+
+check the app.module.ts -- find the new feature module in imports section
+
+thereafter move the product components into this new product module
+
+https://github.com/arunprabu/contact-manager-ng6/blob/master/src/app/app.module.ts
+
+then, create feature routing module 
+    product-routing.module.ts 
+
+    copy paste from app-routing.module.ts 
+    n tgen set up child routes
+    

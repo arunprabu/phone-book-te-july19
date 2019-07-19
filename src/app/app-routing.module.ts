@@ -7,12 +7,13 @@ import { AddContactComponent } from './contacts/add-contact/add-contact.componen
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 
 const routes: Routes = [
-  { path: "", component: ConceptsComponent },
+  { path: "", redirectTo: "/concepts", pathMatch: 'full' },
   { path: "concepts", component: ConceptsComponent },
   { path: "contacts", component: ContactsComponent },
   { path: "contacts/new", component: AddContactComponent },
   { path: "contacts/:id", component: ContactDetailsComponent },
-  { path: "about", component: AboutComponent },
+  { path: "about", component: AboutComponent }
+  // { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({

@@ -9,11 +9,11 @@
     </div>
 
     <div class="row">
-      <div class="card col-sm-3">
+      <div class="card col-sm-3" *ngFor="let contact of contactList">
         <div class="card-body">
-          <h5 class="card-title">John</h5>
-          <p class="card-text">2352345</p>
-          <a routerLink="/contacts/1" class="link">View Details</a>
+          <h5 class="card-title">{{contact.name}}</h5>
+          <p class="card-text">{{contact.phone}}</p>
+          <a routerLink="/contacts/{{contact.id}}" class="link">View Details</a>
         </div>
       </div>
     </div>
