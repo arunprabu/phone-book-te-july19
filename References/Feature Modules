@@ -22,3 +22,54 @@ then, create feature routing module
     copy paste from app-routing.module.ts 
     n tgen set up child routes
     
+    
+  ====
+  Step by Step Instructions for Feature Modules
+  ----
+  localhost:4200/products  -- ProductsComponent
+localhost:4200/products/:id   -- ProductsDetailsComponent 
+--
+Feature Module
+Step1: ng g m products/products --flat --module=app 
+
+Feature Routing Module 
+Step2: ng g m products/products-routing --flat --module=products
+
+Step3: ng g c products -is 
+Step4: ng g c products/product-details -is 
+
+Step5: in product-routing.module.ts
+const productRoutes: Routes = [
+  {
+    path: 'products', children: [
+      { path: '', component: ProductsComponent },
+      { path: ':id', component: ProductDetailsComponent }
+    ]
+  }
+];
+
+and in the same module decorator, register child routes and export
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(productRoutes)
+  ],
+  exports: [RouterModule]
+})
+
+
+Step6: in app.module.ts, imports section swap the order of 
+AppRoutingModule and ProductsModule, like the following
+
+imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ContactModule,
+    ProductsModule,
+    AppRoutingModule
+  ],
+
+Check the app now. 
+====
