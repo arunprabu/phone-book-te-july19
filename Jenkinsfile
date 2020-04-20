@@ -10,13 +10,13 @@ pipeline {
 
     stage ("Code pull"){
       steps{
-          checkout scm
+        checkout scm
       }
     }
 
     stage('Build') {
       steps {
-          bat 'npm install'
+        bat 'npm install'
       }
     }
   }
