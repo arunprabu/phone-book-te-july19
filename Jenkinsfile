@@ -1,24 +1,23 @@
 pipeline {
   
-    agent any
+  agent any
 
-    triggers {
-        pollSCM('*/5   * 1-5')
+  triggers {
+    pollSCM('*/5   * 1-5')
+  }
+
+  stages {
+
+    stage ("Code pull"){
+      steps{
+          checkout scm
+      }
     }
 
-    stages {
-
-        stage ("Code pull"){
-            steps{
-                checkout scm
-            }
-        }
-
-        stage('Build') {
-            steps {
-                bat 'npm install'
-            }
-		}
+    stage('Build') {
+      steps {
+          bat 'npm install'
+      }
     }
-
+  }
 }
